@@ -23,7 +23,7 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
     <label for="form1_nick">Guess the author </label>
     <input type ="text" id="form1_nick" name="form1_nick" autofocus > <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess">
+    <input type="button" class="btn btn-primary" onclick="checkGuess()" value="Check the guess">
 </form>
 
 
@@ -44,13 +44,13 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
             correct=correct+1;  
             alert("You got it right");   
         }else {
-            if(count<3){
+            if(count<7){
                 wrong=wrong+1
                 count=count+1
                 alert("Access denied")
             }  
             else{
-                alert("Sorry, game over.")   
+                alert("Sorry, ran out of guesses.")   
             }    
         }
         out.innerHTML="correct "+correct+"  wrong "+wrong
